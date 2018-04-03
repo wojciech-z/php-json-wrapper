@@ -1,0 +1,24 @@
+{
+  "name": "wojciech/json",
+  "type": "library",
+  "description": "Wrapper for JSON",
+  "keywords": ["json", "wrapper"],
+  "homepage": "https://github.com/wojciech-z/php-json-wrapper",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Wojciech Zabawa",
+      "email": "wojciech@zabawa.org",
+      "homepage": "https://zabawa.org",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+  },
+  "php": "^5.3|^7",
+  "autoload": {
+    "psr-4": {
+      "JSON\\": "src"
+    }
+  }
+}
