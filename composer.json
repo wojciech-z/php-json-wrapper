@@ -1,5 +1,5 @@
 {
-  "name": "wojciech/json",
+  "name": "wojciech/json-wrapper",
   "type": "library",
   "description": "Wrapper for JSON",
   "keywords": ["json", "wrapper"],
