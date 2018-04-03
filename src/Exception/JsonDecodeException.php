@@ -1,5 +1,5 @@
 <?php
-namespace JSON\Exception;
+namespace Wojciech\Json\Exception;
 
 class JsonDecodeException extends \InvalidArgumentException
 {

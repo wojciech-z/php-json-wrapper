@@ -1,9 +1,9 @@
 <?php
-namespace JSON;
+namespace Wojciech\Json;
 
-use JSON\Exception\JsonDecodeException;
+use Wojciech\Json\Exception\JsonDecodeException;
 
-class JSON
+class Json
 {
     public static function decode(string $data)
     {

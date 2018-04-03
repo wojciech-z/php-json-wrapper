@@ -14,11 +14,11 @@
     }
   ],
   "require": {
+    "php": "^5.3|^7"
   },
-  "php": "^5.3|^7",
   "autoload": {
     "psr-4": {
-      "JSON\\": "src"
+      "Wojciech\\": "src"
     }
   }
 }
