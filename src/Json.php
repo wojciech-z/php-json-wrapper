@@ -5,8 +5,17 @@ use Wojciech\Json\Exception\JsonDecodeException;
 
 class Json
 {
-    public static function decode(string $data)
+    /**
+     * @throws \InvalidArgumentException
+     * @param string $data
+     * @return mixed
+     */
+    public static function decode(/*string*/ $data)
     {
+        if (!is_scalar($data)) {
+            throw new \InvalidArgumentException('Data must be a scalar');
+        }
+
         $decoded = json_decode($data, true);
 
         $lastError = json_last_error();
@@ -17,6 +26,10 @@ class Json
         return $decoded;
     }
 
+    /**
+     * @param mixed $data
+     * @return string
+     */
     public static function encode($data)
     {
         return json_encode($data);
