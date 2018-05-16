@@ -18,7 +18,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Wojciech\\": "src"
+      "Wojciech\\Json\\": "src"
     }
   }
 }
