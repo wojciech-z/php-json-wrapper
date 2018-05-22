@@ -3,12 +3,10 @@ namespace Wojciech\Json;
 
 use Wojciech\Json\Exception\JsonDecodeException;
 
-use function {
-    json_decode,
-    json_encode,
-    json_last_error_msg,
-    json_last_error
-};
+use function json_decode;
+use function json_encode;
+use function json_last_error_msg;
+use function json_last_error;
 
 class Json
 {
