@@ -3,19 +3,34 @@ namespace Wojciech\Json;
 
 use Wojciech\Json\Exception\JsonDecodeException;
 
+use function {
+    json_decode,
+    json_encode,
+    json_last_error_msg,
+    json_last_error
+};
+
 class Json
 {
+    /** @return self */
+    public static function static(): self
+    {
+        static $self;
+
+        if (!$self) {
+            $self = new self;
+        }
+
+        return $self;
+    }
+
     /**
      * @throws \InvalidArgumentException
      * @param string $data
      * @return mixed
      */
-    public static function decode(/*string*/ $data)
+    public function decode(string $data)
     {
-        if (!is_scalar($data)) {
-            throw new \InvalidArgumentException('Data must be a scalar');
-        }
-
         $decoded = json_decode($data, true);
 
         $lastError = json_last_error();
@@ -30,7 +45,7 @@ class Json
      * @param mixed $data
      * @return string
      */
-    public static function encode($data)
+    public function encode($data): string
     {
         return json_encode($data);
     }

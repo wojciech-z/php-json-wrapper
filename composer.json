@@ -14,11 +14,29 @@
     }
   ],
   "require": {
-    "php": "^5.3|^7"
+    "php": "^7"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.5"
   },
   "autoload": {
     "psr-4": {
       "Wojciech\\Json\\": "src"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Wojciech\\Json\\Test\\": "tests"
+    }
+  },
+  "support": {
+    "issues": "https://github.com/wojciech-z/php-json-wrapper/issues",
+    "source": "https://github.com/wojciech-z/php-json-wrapper"
+  },
+  "scripts": {
+    "phpunit": "phpunit --verbose --colors=always",
+    "tests": [
+      "@phpunit"
+    ]
   }
 }
